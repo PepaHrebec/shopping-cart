@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Main from "./Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
+import { Header } from "./components/Header";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,7 +19,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/shop" element={<div>Hello</div>} />
+        <Route path="/shop" element={<Header />} />
         <Route path="/shop/:id" />
       </Routes>
     </BrowserRouter>

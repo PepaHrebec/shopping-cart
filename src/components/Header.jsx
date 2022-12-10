@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeaderStyled = styled.div`
-  padding: 24px 40px;
+  padding: 12px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,12 +11,27 @@ const HeaderStyled = styled.div`
   color: white;
 `;
 
+const Icon = styled.img`
+  width: 45px;
+`;
+
+const Cursive = styled.div`
+  font-family: "Sacramento", cursive;
+  font-size: 42px;
+  color: black;
+`;
+
 const Header = () => {
   return (
     <HeaderStyled>
-      <div>Logo</div>
-      <div>Name</div>
-      <div>Icons</div>
+      <Link to={"/"}>
+        {/* <Icon src="https://img.icons8.com/avantgarde/100/null/hot-dog.png" /> */}
+        <Icon src="https://img.icons8.com/laces/64/null/hot-dog.png" />
+      </Link>
+      <Cursive>Glizzy Goblins'</Cursive>
+      <div>
+        <Icon src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/null/external-picnic-entertainment-xnimrodx-lineal-xnimrodx.png" />
+      </div>
     </HeaderStyled>
   );
 };

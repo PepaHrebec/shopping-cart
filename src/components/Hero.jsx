@@ -15,13 +15,18 @@ const HeroStyled = styled.div`
 `;
 
 const HeroName = styled.div`
-  font-weight: 900;
+  font-family: "Sacramento", cursive;
+  font-size: 80px;
   color: white;
-  font-size: xx-large;
+  backdrop-filter: blur(3px);
 `;
 
 const HeroButton = styled.button`
-  padding: 20px;
+  padding: 16px 40px;
+  color: white;
+  background: none;
+  border-radius: 12px;
+  border: solid 2px white;
 `;
 
 const Hero = () => {
