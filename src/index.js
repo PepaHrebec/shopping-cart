@@ -3,12 +3,20 @@ import ReactDOM from "react-dom/client";
 import Main from "./Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import { Header } from "./components/Header";
+import { ShopList } from "./ShopList";
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    font-family: "Martian Mono", monospace;
+  }
+  a:link {
+  text-decoration: none;
+  }
+
+  a:visited {
+  text-decoration: none;
   }
 `;
 
@@ -19,8 +27,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/shop" element={<Header />} />
+        <Route path="/shop" element={<ShopList />} />
         <Route path="/shop/:id" />
+        <Route path="/checkout" />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

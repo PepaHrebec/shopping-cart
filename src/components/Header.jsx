@@ -24,11 +24,13 @@ const Cursive = styled.div`
 const Header = () => {
   return (
     <HeaderStyled>
-      <Link to={"/"}>
+      <Link to={"/shop"}>
         {/* <Icon src="https://img.icons8.com/avantgarde/100/null/hot-dog.png" /> */}
         <Icon src="https://img.icons8.com/laces/64/null/hot-dog.png" />
       </Link>
-      <Cursive>Glizzy Goblins'</Cursive>
+      <Link to={"/"}>
+        <Cursive>Glizzy Goblins'</Cursive>
+      </Link>
       <div>
         <Icon src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/null/external-picnic-entertainment-xnimrodx-lineal-xnimrodx.png" />
       </div>
