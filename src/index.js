@@ -1,25 +1,25 @@
-/** @jsxImportSource @emotion/react */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Main from "./Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Global, css } from "@emotion/react";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Global
-      styles={css`
-        * {
-          margin: 0;
-          padding: 0;
-        }
-      `}
-    />
+    <GlobalStyle />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/shop" element={<div>Hello</div>} />
+        <Route path="/shop/:id" />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
