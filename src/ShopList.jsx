@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Card } from "./components/Card";
 import { Header } from "./components/Header";
+import data from "./data.json";
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,14 +21,17 @@ const ShopList = () => {
     <Wrapper>
       <Header />
       <CardWrapper>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.menu.map((item) => {
+          return (
+            <Card
+              name={item.name}
+              price={item.price}
+              describe={item.describe}
+              key={item.id}
+              id={item.id}
+            />
+          );
+        })}
       </CardWrapper>
     </Wrapper>
   );

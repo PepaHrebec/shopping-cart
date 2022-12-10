@@ -21,6 +21,7 @@ const LeftDiv = styled.div`
 `;
 
 const BottomSmall = styled.div`
+  margin-top: 5px;
   grid-column: span 2;
   font-weight: 100;
   font-size: small;
@@ -28,12 +29,13 @@ const BottomSmall = styled.div`
 
 const Card = (props) => {
   return (
+    // src={`/imgs/hotdog${props.id}.webp`}
     <Wrapper>
       <Image src="/imgs/hotdog1.webp" alt="" />
       <Bottom>
-        <div>Glizzy</div>
-        <LeftDiv>9.99$</LeftDiv>
-        <BottomSmall>Best selling rock-star of a Hot Dog.</BottomSmall>
+        <div>{props.name}</div>
+        <LeftDiv>{props.price}$</LeftDiv>
+        <BottomSmall>{props.describe}</BottomSmall>
       </Bottom>
     </Wrapper>
   );
