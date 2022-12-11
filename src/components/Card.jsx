@@ -8,13 +8,15 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 `;
 
 const Bottom = styled.div`
   margin: 4px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   color: black;
 `;
 

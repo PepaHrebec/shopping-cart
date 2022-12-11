@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ItemPage } from "./views/ItemPage";
 import Main from "./views/Main";
 import { ShopList } from "./views/ShopList";
 
@@ -15,7 +16,7 @@ const RouteSwitch = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/shop" element={<ShopList />} />
-          <Route path="/shop/:id" element={<div>Hello</div>} />
+          <Route path="/shop/:id" element={<ItemPage />} />
         </Routes>
       </CartContext.Provider>
     </BrowserRouter>
