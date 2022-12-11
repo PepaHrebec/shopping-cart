@@ -1,7 +1,9 @@
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
-import { Card } from "./components/Card";
-import { Header } from "./components/Header";
-import data from "./data.json";
+import { Card } from "../components/Card";
+import { Header } from "../components/Header";
+import data from "../data.json";
+import { CartContext } from "../RouteSwitch";
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,6 +19,14 @@ const CardWrapper = styled.div`
 `;
 
 const ShopList = () => {
+  const { cart, setCart } = useContext(CartContext);
+
+  useEffect(() => {
+    cart[0] += 1;
+    setCart([...cart]);
+    console.log(cart[0]);
+  }, []);
+
   return (
     <Wrapper>
       <Header />
@@ -27,6 +37,7 @@ const ShopList = () => {
               name={item.name}
               price={item.price}
               describe={item.describe}
+              src={item.src}
               key={item.id}
               id={item.id}
             />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -14,6 +15,7 @@ const Bottom = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  color: black;
 `;
 
 const LeftDiv = styled.div`
@@ -31,12 +33,14 @@ const Card = (props) => {
   return (
     // src={`/imgs/hotdog${props.id}.webp`}
     <Wrapper>
-      <Image src="/imgs/hotdog1.webp" alt="" />
-      <Bottom>
-        <div>{props.name}</div>
-        <LeftDiv>{props.price}$</LeftDiv>
-        <BottomSmall>{props.describe}</BottomSmall>
-      </Bottom>
+      <Link to={`/shop/${props.id}`}>
+        <Image src={props.src} alt="" />
+        <Bottom>
+          <div>{props.name}</div>
+          <LeftDiv>{props.price}$</LeftDiv>
+          <BottomSmall>{props.describe}</BottomSmall>
+        </Bottom>
+      </Link>
     </Wrapper>
   );
 };

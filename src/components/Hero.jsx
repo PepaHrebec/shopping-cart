@@ -18,6 +18,7 @@ const HeroName = styled.div`
   font-size: 80px;
   color: white;
   backdrop-filter: blur(3px);
+  text-align: center;
 `;
 
 const HeroButton = styled.button`

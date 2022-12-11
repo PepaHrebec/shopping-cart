@@ -4,55 +4,57 @@
       "id": "0",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "1",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "2",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "3",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "4",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "5",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "6",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     },
     {
       "id": "7",
       "name": "Glizzy",
       "price": "1",
-      "describe": "Tastes ok."
-    },
-    {
-      "id": "8",
-      "name": "Glizzy",
-      "price": "1",
-      "describe": "Tastes ok."
+      "describe": "Tastes ok.",
+      "src": "/imgs/hotdog1.webp"
     }
   ]
 }
