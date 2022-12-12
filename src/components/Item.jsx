@@ -73,8 +73,8 @@ const BuyButton = styled.button`
   padding: 10px 20px;
   border: solid black 2px;
   font-family: "Martian Mono", monospace;
-  background-color: ${(props) => (props.amount === 0 ? "white" : "lightgreen")};
-  cursor: ${(props) => (props.amount === 0 ? "auto" : "pointer")};
+  background-color: ${(props) => (props.amount < 1 ? "white" : "lightgreen")};
+  cursor: ${(props) => (props.amount < 1 ? "auto" : "pointer")};
 `;
 
 const Item = (props) => {
@@ -89,7 +89,7 @@ const Item = (props) => {
     if (amount === 0 && val === -1) {
       return null;
     } else {
-      setAmount(amount + val);
+      setAmount(Number(amount) + Number(val));
     }
   };
 
@@ -99,6 +99,13 @@ const Item = (props) => {
       cart[props.id] += val;
       setCart([...cart]);
       console.log(cart);
+    }
+  };
+
+  const clearedInput = () => {
+    let val = document.querySelector("#Input").value;
+    if (val === "" || val < 0) {
+      setAmount(0);
     }
   };
 
@@ -117,6 +124,9 @@ const Item = (props) => {
               value={amount}
               onChange={(e) => {
                 changeAmount(e);
+              }}
+              onBlur={() => {
+                clearedInput();
               }}
             />
             <StyledButtonPM

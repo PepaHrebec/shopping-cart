@@ -1,9 +1,7 @@
-import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Card } from "../components/Card";
 import { Header } from "../components/Header";
 import data from "../data.json";
-import { CartContext } from "../RouteSwitch";
 
 const Wrapper = styled.div`
   display: flex;
