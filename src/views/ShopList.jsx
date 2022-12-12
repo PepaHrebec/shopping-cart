@@ -19,14 +19,6 @@ const CardWrapper = styled.div`
 `;
 
 const ShopList = () => {
-  // const { cart, setCart } = useContext(CartContext);
-
-  // useEffect(() => {
-  //   cart[0] += 1;
-  //   setCart([...cart]);
-  //   console.log(cart[0]);
-  // }, []);
-
   return (
     <Wrapper>
       <Header />

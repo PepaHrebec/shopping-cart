@@ -30,6 +30,7 @@ const ItemPage = () => {
           name={itemObj.name}
           src={itemObj.src}
           describe={itemObj.describe}
+          id={itemObj.id}
         />
       </CardWrapper>
     </Wrapper>

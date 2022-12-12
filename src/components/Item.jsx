@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styled from "styled-components";
+import { CartContext } from "../RouteSwitch";
 
 const Wrapper = styled.div`
-  height: clamp(100px, 40%, 200px);
-  width: clamp(300px, 80%, 800px);
+  height: clamp(250px, 50%, 600px);
+  width: clamp(400px, 80%, 800px);
   display: flex;
 `;
 
@@ -41,6 +42,7 @@ const InpWrap = styled.div`
 
 const Inp = styled.input`
   width: 30%;
+  margin-right: 5px;
   padding: 10px;
   font-family: "Martian Mono", monospace;
   ::-webkit-inner-spin-button {
@@ -53,11 +55,51 @@ const Inp = styled.input`
   }
 `;
 
+const PlusMinusWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const StyledButtonPM = styled.button`
+  border: none;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+`;
+
+const BuyButton = styled.button`
+  padding: 10px 20px;
+  border: solid black 2px;
+  font-family: "Martian Mono", monospace;
+  background-color: ${(props) => (props.amount === 0 ? "white" : "lightgreen")};
+  cursor: ${(props) => (props.amount === 0 ? "auto" : "pointer")};
+`;
+
 const Item = (props) => {
+  const { cart, setCart } = useContext(CartContext);
   const [amount, setAmount] = useState(0);
 
   const changeAmount = (e) => {
     setAmount(e.target.value);
+  };
+
+  const changeAmountBy = (val) => {
+    if (amount === 0 && val === -1) {
+      return null;
+    } else {
+      setAmount(amount + val);
+    }
+  };
+
+  const buy = () => {
+    let val = Number(document.querySelector("#Input").value);
+    if (val !== 0) {
+      cart[props.id] += val;
+      setCart([...cart]);
+      console.log(cart);
+    }
   };
 
   return (
@@ -67,14 +109,39 @@ const Item = (props) => {
         <Name>{props.name}</Name>
         <SmallText>{props.describe}</SmallText>
         <InpWrap>
-          <Inp
-            type={"number"}
-            min="0"
-            value={amount}
-            onChange={(e) => {
-              changeAmount(e);
-            }}
-          />
+          <PlusMinusWrap>
+            <Inp
+              id="Input"
+              type={"number"}
+              min="0"
+              value={amount}
+              onChange={(e) => {
+                changeAmount(e);
+              }}
+            />
+            <StyledButtonPM
+              onClick={() => {
+                changeAmountBy(-1);
+              }}
+            >
+              -
+            </StyledButtonPM>
+            <StyledButtonPM
+              onClick={() => {
+                changeAmountBy(1);
+              }}
+            >
+              +
+            </StyledButtonPM>
+            <BuyButton
+              amount={amount}
+              onClick={() => {
+                buy();
+              }}
+            >
+              Add to cart
+            </BuyButton>
+          </PlusMinusWrap>
         </InpWrap>
       </RightSide>
     </Wrapper>
