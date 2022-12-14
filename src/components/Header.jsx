@@ -31,9 +31,9 @@ const Header = () => {
       <Link to={"/"}>
         <Cursive>Glizzy Goblins'</Cursive>
       </Link>
-      <div>
+      <Link to={"/checkout"}>
         <Icon src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/null/external-picnic-entertainment-xnimrodx-lineal-xnimrodx.png" />
-      </div>
+      </Link>
     </HeaderStyled>
   );
 };

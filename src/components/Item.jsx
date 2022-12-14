@@ -79,7 +79,7 @@ const BuyButton = styled.button`
 
 const Item = (props) => {
   const { cart, setCart } = useContext(CartContext);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
 
   const changeAmount = (e) => {
     setAmount(e.target.value);
