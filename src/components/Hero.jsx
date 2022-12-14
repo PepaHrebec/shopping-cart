@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HeroStyled = styled.div`
   flex: 1 1 auto;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-image: url("/imgs/dog.jpg");
+  background-image: url("./imgs/dog.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

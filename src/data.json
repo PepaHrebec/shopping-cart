@@ -5,56 +5,56 @@
       "name": "STIX",
       "price": "9.99",
       "describe": "Crunchy meat on a stick rolled in cheese, potato, ramen, or panko, and is drizzled in spicy mayo.",
-      "src": "/imgs/hotdog0.webp"
+      "src": "./imgs/hotdog0.webp"
     },
     {
       "id": "1",
       "name": "Ol' Glizzy",
       "price": "3.99",
       "describe": "Tastes ok. A real soldier of a hot dog. Probably the best dog/price ratio we'll ever have.",
-      "src": "/imgs/hotdog1.webp"
+      "src": "./imgs/hotdog1.webp"
     },
     {
       "id": "2",
       "name": "The Progress",
       "price": "12.99",
       "describe": "Double-smoked pork hot dog with bonito-rosemary aioli, kimchi, and toasted sesame on a grilled milk bun.",
-      "src": "/imgs/hotdog2.webp"
+      "src": "./imgs/hotdog2.webp"
     },
     {
       "id": "3",
       "name": "Willkommen",
       "price": "10.00",
       "describe": "A tasteful combination of a organic meat and perfectly sour German sauerkraut.",
-      "src": "/imgs/hotdog3.webp"
+      "src": "./imgs/hotdog3.webp"
     },
     {
       "id": "4",
       "name": "4505 HOT DOG",
       "price": "7.95",
       "describe": "Bacon studded dog on a bun, served with small slaw.",
-      "src": "/imgs/hotdog4.webp"
+      "src": "./imgs/hotdog4.webp"
     },
     {
       "id": "5",
       "name": "DittyDog",
       "price": "14.20",
       "describe": "Beef hot dog, overloaded with spreads and toppings, from cream cheese (yes) to caramelized onions.",
-      "src": "/imgs/hotdog5.webp"
+      "src": "./imgs/hotdog5.webp"
     },
     {
       "id": "6",
       "name": "Domo Alley-Gato Tatsu-Ya",
       "price": "18.99",
       "describe": "Japanese take on hot dog is wrapped in a panko brioche filled with curry chili, cabbage and honey aioli.",
-      "src": "/imgs/hotdog6.webp"
+      "src": "./imgs/hotdog6.webp"
     },
     {
       "id": "7",
       "name": "New York Burger Co.",
       "price": "11.95",
       "describe": "Exactly 12 inches of weenie, succulent and salty and every bit as good as the best examples of regular dogs in town.",
-      "src": "/imgs/hotdog7.webp"
+      "src": "./imgs/hotdog7.webp"
     }
   ]
 }

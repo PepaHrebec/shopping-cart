@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { ItemPage } from "./views/ItemPage";
 import Main from "./views/Main";
 import { ShopList } from "./views/ShopList";
@@ -12,7 +12,7 @@ const RouteSwitch = () => {
   const value = { cart, setCart };
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <CartContext.Provider value={value}>
         <Routes>
           <Route path="/" element={<Main />} />
