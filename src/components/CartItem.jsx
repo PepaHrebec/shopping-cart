@@ -32,6 +32,7 @@ const ButtonWrap = styled.div`
 `;
 
 const Price = styled.div`
+  width: 10%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
