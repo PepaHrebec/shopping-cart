@@ -27,7 +27,7 @@ const ItemPage = () => {
       <Header />
       <CardWrapper>
         <Item
-          name={itemObj.name}
+          name={`.${itemObj.name}`} //the issue should be fixed here?
           src={itemObj.src}
           describe={itemObj.describe}
           id={itemObj.id}
