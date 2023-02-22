@@ -12,7 +12,7 @@ const RouteSwitch = () => {
   const value = { cart, setCart };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <CartContext.Provider value={value}>
         <Routes>
           <Route path="/" element={<Main />} />
