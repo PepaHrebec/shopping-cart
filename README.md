@@ -1,4 +1,6 @@
-# Shopping Cart🧺
+# Shopping Cart🧺  
+
+Try it out: https://pepahrebec.github.io/shopping-cart
 
 **Technologies used in development**
 
