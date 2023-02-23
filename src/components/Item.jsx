@@ -4,8 +4,12 @@ import { CartContext } from "../RouteSwitch";
 
 const Wrapper = styled.div`
   height: clamp(250px, 50%, 600px);
-  width: clamp(400px, 80%, 800px);
+  width: clamp(250px, 80%, 800px);
   display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 `;
 
 const Name = styled.div`
@@ -23,14 +27,18 @@ const ImgStyled = styled.img`
 const RightSide = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  @media (min-width: 600px) {
+    margin-left: 10px;
+  }
 `;
 
 const SmallText = styled.div`
   font-weight: 100;
   font-size: small;
   padding: 10px 0 20px 0;
-  border-bottom: 2px dashed black;
+  @media (min-width: 600px) {
+    border-bottom: 2px dashed black;
+  }
 `;
 
 const InpWrap = styled.div`

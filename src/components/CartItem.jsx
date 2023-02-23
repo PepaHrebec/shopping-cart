@@ -36,6 +36,10 @@ const Price = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  display: none;
+  @media (min-width: 600px) {
+    display: block;
+  }
 `;
 
 const RemoveItem = styled.button`

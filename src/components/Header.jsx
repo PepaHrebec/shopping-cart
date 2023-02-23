@@ -19,6 +19,7 @@ const Cursive = styled.div`
   font-family: "Sacramento", cursive;
   font-size: 42px;
   color: black;
+  text-align: center;
 `;
 
 const Header = () => {
